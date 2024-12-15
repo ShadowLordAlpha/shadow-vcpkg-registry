@@ -4,6 +4,14 @@
   "description": "StarCraft II Client - protocol definitions used to communicate with StarCraft II.",
   "homepage": "https://github.com/Blizzard/s2client-proto",
   "dependencies": [
-    "protobuf"
+    "protobuf",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
   ]
 }
