@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(sc2protocol)
 
 # Find the Protobuf library
-find_package(Protobuf REQUIRED)
+find_package(protobuf CONFIG REQUIRED)
 
 file(GLOB PROTO_FILES "s2clientprotocol/*.proto")
 
@@ -24,7 +24,7 @@ protobuf_generate(
     PROTOC_OUT_DIR ${proto_generation_dir}
 )
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Protobuf::libprotobuf)
+target_link_libraries(${PROJECT_NAME} PUBLIC libprotobuf)
 
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PRIVATE /W0)
