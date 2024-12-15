@@ -27,7 +27,7 @@ protobuf_generate(
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${Protobuf_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} PUBLIC libprotobuf)
+target_link_libraries(${PROJECT_NAME} PUBLIC protobuf::libprotobuf)
 
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PRIVATE /W0)
