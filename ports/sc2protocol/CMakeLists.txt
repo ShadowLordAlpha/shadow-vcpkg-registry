@@ -4,15 +4,16 @@ project(sc2protocol)
 # Find the Protobuf library
 find_package(Protobuf CONFIG REQUIRED)
 
-file(GLOB PROTO_FILES "s2clientprotocol/*.proto")
+file(GLOB PROTO_FILES "/s2clientprotocol/*.proto")
 
 if ("${PROTO_FILES}" STREQUAL "")
     message(FATAL_ERROR "Missing SC2 Protocol files. Please fix and try again")
 endif ()
 
 # Create the output directory for generated protos.
-set(proto_generation_dir "/generated/s2clientprotocol")
+set(proto_generation_dir "${CMAKE_CURRENT_LIST_DIR}/generated/")
 file(MAKE_DIRECTORY "${proto_generation_dir}")
+message(STATUS "CREATING FOLDER: ${proto_generation_dir}")
 
 add_library(${PROJECT_NAME})
 
