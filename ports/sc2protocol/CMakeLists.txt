@@ -16,6 +16,7 @@ file(MAKE_DIRECTORY "${proto_generation_dir}")
 message(STATUS "CREATING FOLDER: ${proto_generation_dir}")
 
 add_library(${PROJECT_NAME})
+target_include_directories(${PROJECT_NAME} PUBLIC generated)
 
 # Generate C++ code from the .proto files
 protobuf_generate(
