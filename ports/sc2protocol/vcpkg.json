@@ -1,0 +1,9 @@
+{
+  "name": "sc2protocol",
+  "version-string": "5.0.14.93333.0",
+  "description": "StarCraft II Client - protocol definitions used to communicate with StarCraft II.",
+  "homepage": "https://github.com/Blizzard/s2client-proto",
+  "dependencies": [
+    "protobuf"
+  ]
+}
