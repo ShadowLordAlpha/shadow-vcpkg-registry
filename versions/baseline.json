@@ -1,5 +1,5 @@
 {
   "default": {
-    "sc2protocol": { "baseline": "5.0.14.93333.0", "port-version": 0 }
+    "sc2protocol": { "baseline": "5.0.14.93333.0", "port-version": 1 }
   }
 }
