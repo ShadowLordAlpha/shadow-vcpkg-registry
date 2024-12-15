@@ -14,15 +14,16 @@ endif ()
 set(proto_generation_dir "${SOURCE_PATH}/generated/s2clientprotocol")
 file(MAKE_DIRECTORY "${proto_generation_dir}")
 
+add_library(${PROJECT_NAME})
+
 # Generate C++ code from the .proto files
 protobuf_generate(
-    TARGET sc2protocol
     LANGUAGE cpp
+    TARGET ${PROJECT_NAME}
     PROTOS ${PROTO_FILES}
-#    PROTOC_OUT_DIR ${proto_generation_dir}
+    PROTOC_OUT_DIR ${proto_generation_dir}
 )
 
-add_library(${PROJECT_NAME} STATIC ${proto_src})
 target_link_libraries(${PROJECT_NAME} PUBLIC Protobuf::libprotobuf)
 
 if (MSVC)
