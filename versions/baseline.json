@@ -2,7 +2,7 @@
   "default": {
     "sc2protocol": {
       "baseline": "5.0.14.93333.0",
-      "port-version": 9
+      "port-version": 10
     }
   }
 }
