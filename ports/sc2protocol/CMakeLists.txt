@@ -11,7 +11,7 @@ if ("${PROTO_FILES}" STREQUAL "")
 endif ()
 
 # Create the output directory for generated protos.
-set(proto_generation_dir "${SOURCE_PATH}/generated/s2clientprotocol")
+set(proto_generation_dir "/generated/s2clientprotocol")
 file(MAKE_DIRECTORY "${proto_generation_dir}")
 
 add_library(${PROJECT_NAME})
